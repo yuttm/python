@@ -1,4 +1,3 @@
-from dis import dis
 from time import time
 from tkinter import *
 
@@ -18,7 +17,7 @@ def goodfun():
 
 
 win = Tk()
-win.title('金子豪比我慢')
+win.title('hi')
 sw = True
 
 bty = Button(win, text="請輸入公分", command=goodfun)
