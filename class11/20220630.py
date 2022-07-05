@@ -33,9 +33,12 @@ def display_font(win):
 
 
 while True:
+    mouse_pose = pygame.mouse.get_pos()
+    print(mouse_pose)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            sys.exit()
+            if check_click(mouse_pose, 0, 0, tit_w, tit_h):
+                sys.exit()
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             sw = not (sw)
@@ -51,7 +54,6 @@ while True:
         bg.fill((227, 158, 93))
         screen.blit(bg, (0, 0))
         display_font(screen)
-    mouse_pose = pygame.mouse.get_pos()
-    print(mouse_pose)
+
     #pygame.draw.arc(bg, (255, 10, 0), [100, 100, 100, 50], math.radians(180),math.radians(0), 2)
     pygame.display.update()
